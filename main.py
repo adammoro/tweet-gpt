@@ -24,7 +24,7 @@ client = tweepy.Client(
 api = tweepy.API(auth)
 def generate_tweet():
     prompt = f"""
-    Please generate a riddle in one sentence about a popular movie scene. Use the Tweet Template below for your response.
+    Please generate a riddle in one sentence about a popular movie scene. Do not use actor names. Be clever, witty and concise. Use the Tweet Template below for your response.
 [Tweet Template:
 
 🎥 The Scene: <one sentence riddle about the popular movie scene>.
