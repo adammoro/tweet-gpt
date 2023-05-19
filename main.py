@@ -24,10 +24,10 @@ client = tweepy.Client(
 api = tweepy.API(auth)
 def generate_tweet():
     prompt = f"""
-    Please generate a riddle in one sentence about a popular movie scene. Do not use actor names. Be clever, witty and concise. Use the Tweet Template below for your response.
+    Give me a riddle in one sentence about a movie scene from a popular movie. Don't mention any actor names. Try to make the riddle accurate and true to the movie. Also try to make the riddle clever and a little difficult. Use the Tweet Template below for your response.
 [Tweet Template:
 
-🎥 The Scene: <one sentence riddle about the popular movie scene>.
+🎥 The Scene: <the riddle>.
 
 🎬 ReelRiddle time! Can you guess the movie from this iconic scene? 🕵️‍♂️ Drop your answer in the comments! 🍿 #ReelRiddle #MovieTrivia]
 
@@ -44,7 +44,7 @@ def post_tweet(tweet):
     try:
         #api.update_status(tweet)
         client.create_tweet(text=tweet)
-        print(f"Tweet posted: {tweet}")
+        #print(f"Tweet posted: {tweet}")
     except tweepy.TweepError as e:
         print(f"Error posting tweet: {e}")
 if __name__ == "__main__":
