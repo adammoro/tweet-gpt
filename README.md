@@ -8,3 +8,7 @@ This is a simple Python script that uses OpenAI's Chat API to generate tweets an
 `pip install tweepy`
 `pip install openai`
 4. Set it and forget it with a cron job
+
+## See it in action!
+
+I use this script for a Twitter account called [Reel Riddles](https://twitter.com/ReelRiddles) that posts riddles about scenes from popular movies. The script itself works great but the prompt could use some engineering. Have fun!
