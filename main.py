@@ -21,7 +21,6 @@ client = tweepy.Client(
     access_token_secret=access_token_secret
 )
 
-api = tweepy.API(auth)
 def generate_tweet():
     prompt = f"""
     Give me a riddle in one sentence about a movie scene from a popular movie. Don't mention any actor names. Try to make the riddle accurate and true to the movie. Also try to make the riddle clever and a little difficult. Use the Tweet Template below for your response.
@@ -42,7 +41,6 @@ def generate_tweet():
 
 def post_tweet(tweet):
     try:
-        #api.update_status(tweet)
         client.create_tweet(text=tweet)
         #print(f"Tweet posted: {tweet}")
     except tweepy.TweepError as e:
